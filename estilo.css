@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body.futuristic-bg {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(ellipse at center, #0f2027, #203a43, #2c5364);
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.futuristic-box {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #00f0ff, 0 0 40px #00d4ff inset;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.futuristic-box h2 {
+    margin-bottom: 25px;
+    color: #00e6ff;
+    font-weight: 700;
+}
+
+.futuristic-box input[type="text"],
+.futuristic-box input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    background: #111;
+    border: 1px solid #00e6ff;
+    border-radius: 8px;
+    color: #00e6ff;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.futuristic-box input[type="text"]:focus,
+.futuristic-box input[type="password"]:focus {
+    outline: none;
+    border-color: #00ffff;
+    box-shadow: 0 0 8px #00e6ff;
+}
+
+.futuristic-box input[type="submit"] {
+    background: linear-gradient(45deg, #00d4ff, #00ffaa);
+    color: #000;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.futuristic-box input[type="submit"]:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #00ffff;
+}
+
+.error {
+    background: #ff2e2e;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 0 8px #ff0000;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
