@@ -1,0 +1,28 @@
+CREATE DATABASE reparaciones;
+USE reparaciones;
+
+CREATE TABLE usuarios (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  usuario VARCHAR(50) UNIQUE NOT NULL,
+  clave VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE registros (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre_cliente VARCHAR(100),
+  telefono_cliente VARCHAR(20),
+  correo_cliente VARCHAR(100),
+  tipo_equipo VARCHAR(100),
+  descripcion TEXT,
+  costo_estimado DECIMAL(10,2),
+  tiempo_estimado VARCHAR(100),
+  foto_entrada VARCHAR(255),
+  foto_salida VARCHAR(255),
+  observaciones_finales TEXT,
+  fecha_ingreso DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO usuarios (usuario, clave) VALUES ('admin', SHA2('contraseña123',256));
+select * from registros;
+select * from usuarios;
+drop database reparaciones;
